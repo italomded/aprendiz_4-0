@@ -11,7 +11,6 @@ function adaptCarousel(){
 }
 
 function adaptFooter(){
-    console.log("fui executado");
     const viewportWidth = window.innerWidth;
     const elements = document.getElementsByClassName("footer-img");
     if (elements != null) {
