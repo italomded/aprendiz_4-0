@@ -1,18 +1,34 @@
 function adaptCarousel(){
     const viewportWidth = window.innerWidth;
-    if (viewportWidth < 900) {
-        const element = document.getElementById("carousel-container");
-        element.style.height = "10rem"
+    const element = document.getElementById("carousel-container");
+    if (element != null) {
+        if (viewportWidth < 900) {
+            element.style.height = "10rem"
+        } else {
+            element.style.height = "30rem"
+        }
     }
 }
 
 function adaptFooter(){
-    console.log("ola");
+    console.log("fui executado");
     const viewportWidth = window.innerWidth;
-    if (viewportWidth < 900) {
-        const elements = document.getElementsByClassName("footer-img");
-        for (let i = 0 ; i < elements.length ; i++) {
-            elements[i].style.height = "3rem";
+    const elements = document.getElementsByClassName("footer-img");
+    if (elements != null) {
+        if (viewportWidth < 900) {
+            for (let i = 0 ; i < elements.length ; i++) {
+                elements[i].style.height = "3rem";
+            }
+        } else {
+            for (let i = 0 ; i < elements.length ; i++) {
+                elements[i].style.height = "5rem";
+            }
         }
     }
+
 }
+
+window.addEventListener('resize', function(){adaptFooter(); adaptCarousel()}, true);
+setTimeout(() => {
+    adaptFooter(); adaptCarousel();
+}, 300)
