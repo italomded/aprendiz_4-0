@@ -31,3 +31,6 @@ window.addEventListener('resize', function(){adaptFooter(); adaptCarousel()}, tr
 setTimeout(() => {
     adaptFooter(); adaptCarousel();
 }, 300)
+setTimeout(() => {
+    adaptFooter(); adaptCarousel();
+}, 500)
