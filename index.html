@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aprendiz 4.0</title>
+    <!-- Change viewport -->
+    <script src="./js/viewportChange.js"></script>
     <!-- Dependencies -->
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <script src="https://unpkg.com/htmlincludejs"></script>
@@ -16,10 +18,10 @@
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
           crossorigin="anonymous">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100" onload="adaptFooter()">
     <include src="./html-parts/navbar.html"></include>
 
-    <div class="container-fluid">
+    <div class="container-fluid mb-5">
 
         <div class="row justify-content-center">
             <img src="./images/logo/logo.jpeg" alt="Logomarca do projeto Aprendiz 4.0" style="height: 20rem; width: 20rem;">
@@ -31,12 +33,23 @@
             <div class="col-12 col-lg-10">
                 <div class="card">
                     <div class="card-header">
-                        NOVIDADES
+                        <i class="fa-solid fa-bullhorn"></i>
+                        ANÚNCIO
                     </div>
                     <div class="card-body">
                         <md-block src="./md/begin.md">
                             Error 404: File not found.
                         </md-block>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.instagram.com/aprendiz4.0/" class="btn btn-outline-primary mb-1">
+                            <i class="fa-brands fa-square-instagram"></i>
+                            Nos siga no Instagram!
+                        </a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9mAWk3pwcUyojI4SEbx6w1XSzinaFiEilpldva_lEXzoGaA/viewform?usp=sf_link" class="btn btn-outline-primary mb-1">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            Inscreva-se!
+                        </a>
                     </div>
                 </div>
             </div>

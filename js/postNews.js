@@ -13,7 +13,7 @@ async function populate() {
         '<div class="col-12 col-lg-10 justify-content-center">',
         '<div class="card">',
         '<div class="card-header">',
-        '<i class="fa-solid fa-envelope"></i>',
+        '<i class="fa-solid fa-newspaper"></i>',
         '</div>',
         '<div class="card-body">'
     );
@@ -42,6 +42,15 @@ async function populate() {
     }
 
     document.getElementById('newsPlaceholder').innerHTML = finalHtml;
+}
+
+async function archived() {
+    const data = await this.get()
+    let html = "";
+    for (let file of data) {
+        html += `<a href="${file.html_url}" class="list-group-item list-group-item-action"><i class="fa-solid fa-file"></i> ${file.name}</a>`;
+    }
+    document.getElementById('newsPlaceholder').innerHTML = html;
 }
 
 

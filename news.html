@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aprendiz 4.0</title>
+    <!-- Change viewport -->
+    <script src="./js/viewportChange.js"></script>
     <!-- Dependencies -->
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <script src="https://unpkg.com/htmlincludejs"></script>
@@ -16,11 +18,21 @@
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
           crossorigin="anonymous">
 </head>
-<body onload="populate()">
+<body class="d-flex flex-column min-vh-100" onload="populate(); adaptFooter()">
     <include src="./html-parts/navbar.html"></include>
 
-    <div id="newsPlaceholder" class="container-fluid">
-        <!-- News here! -->
+    <div class="container-fluid mb-5">
+        <div class="row text-center mb-5">
+            <h1 class="display-5">Notícias mais recentes</h1>
+        </div>
+        <div id="newsPlaceholder">
+            <!-- News here! -->
+        </div>
+        <div class="row justify-content-center">
+            <a class="col-auto btn btn-primary" href="./archived-news.html" role="button">
+                Ver notícias arquivadas
+            </a>
+        </div>
     </div>
 
     <include src="./html-parts/footer.html"></include>
