@@ -15,11 +15,32 @@
           crossorigin="anonymous">
 </head>
 <body>
-    <include src="./base/header.html"></include>
-
+    <include src="./components/navbar.html"></include>
     <div class="container-fluid">
-        <include src="./current-page.html"></include>
+
+        <div class="row justify-content-center">
+            <img src="./media/logo/logo.jpg" alt="Logomarca do projeto Aprendiz 4.0" style="height: 20rem; width: 20rem;">
+            <figure class="text-center mb-5">
+                <h1 class="display-1">Bem-vindo!</h1>
+            </figure>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-header">
+                        NOVIDADES
+                    </div>
+                    <div class="card-body">
+                        <md-block src="./news/begin.md">
+                            Error 404: File not found.
+                        </md-block>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
+    <include src="./components/footer.html"></include>
 
     <!-- Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
